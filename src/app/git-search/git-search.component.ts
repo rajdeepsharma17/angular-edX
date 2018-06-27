@@ -15,7 +15,6 @@ export class GitSearchComponent implements OnInit {
   ngOnInit() {
     this.GitSearchService.gitSearch('angular').then( (response) => {
       this.searchResults = response;
-      alert(this.searchResults)
     }, (error) => {
       alert("Error: " + error.statusText)
     })
